@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            display: flex ;
+            align-items: center ;
+            justify-content: center ;
+            flex-direction: row;
+
+        }
+
+        .main {
+            height: 300px ;
+            margin-top: 300px ;
+            width: 300px ;
+        
+        }
+
+
+
+        
+        .imageON {
+            display: none ;
+        }
+
+        .imageOFF{
+            display: none ;
+        }
+
+        div h2 {
+            margin-left: 25px ;
+            color : green ; 
+        }
+
+        div #offf {
+            color : red ; 
+            
+
+        }
+
+        div .btn1 {
+            font-size: 20PX ;
+            margin-top: 20px ;
+            background-color: green ;
+            margin-left: 100px ;
+        }
+
+        div .btn2 {
+
+            font-size: 20PX ;
+            margin-top: 20px ;
+            background-color: red  ;
+            margin-left: 10px ;
+
+        }
+
+        .buttons {
+            display:  flex;
+            flex-direction: row ;
+            margin-right: 100px ;
+        } 
+
+        .images {
+            display: block; 
+            margin-left: 50px ;
+
+        }
+        
+
+
+
+
+
+    </style>
+
+    <div class="main">
+        <div class="images">
+            <div class="imageON">
+                <h2>YA3TEK 3ASBA</h2>
+            
+            </div>    
+            
+            <div class="imageOFF"> 
+                <h2 id="offf">YA3TEK 3ASBTIN</h2>
+            </div>
+        </div>    
+        <div class="buttons">
+            <button class="btn1" id="on">ON</button>
+            <button class= "btn2" id="off">OFF</button>    
+        </div>
+    
+    </div>
+
+
+
+
+
+        <script>
+        let a = document.getElementById("on")  ;
+        let b = document.getElementById("off")  ;
+        let c = document.getElementsByTagName("div")[2] ; 
+        let d = document.getElementsByTagName("div")[3] ;
+        console.log(a,b,c,d) ;
+        
+        a.onclick = function(){
+            c.classList.remove("imageON") ;  
+            d.classList.add("imageOFF") ;
+        }
+        b.onclick = function(){
+            d.classList.remove("imageOFF") ;
+            c.classList.add("imageON") ;    
+
+        }
+
+
+    </script>
+</body>
+</html>
